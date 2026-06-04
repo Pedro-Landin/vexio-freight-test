@@ -67,16 +67,19 @@
 .loadingWrapper {
   display: flex;
   align-items: center;
+  margin-top: 15px;
 }
 
 .loadingText {
   color: #666;
   margin: 0;
+  margin-left: 10px;
 }
 
 .dot {
   width: 6px;
   height: 6px;
+  margin: 0 2px;
   border-radius: 50%;
   background: #999;
   animation: blink 1.2s ease-in-out infinite;

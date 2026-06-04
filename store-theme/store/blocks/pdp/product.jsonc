@@ -113,7 +113,7 @@
       "flex-layout.row#buy-button",
       "availability-subscriber",
       "app-freightSimulator",
-      "shipping-simulator",
+      /* "shipping-simulator", */
       "share#default"
     ]
   },
