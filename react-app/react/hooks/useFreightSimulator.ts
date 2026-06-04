@@ -96,6 +96,7 @@ export function useFreightSimulator(): UseFreightSimulatorReturn {
               self.findIndex((s) => s.id === sla.id) === index
           ) ?? []
 
+      console.log('[Fretes Disponiveis]', allSlas)
       setSlas(allSlas)
     } catch (err) {
       console.error('[FreightSimulator]', err)

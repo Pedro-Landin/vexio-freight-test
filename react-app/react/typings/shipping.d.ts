@@ -1,6 +1,6 @@
 export interface Sla {
   id: string
-  friendlyName: string
+  name: string
   price: number
   shippingEstimate: string
 }

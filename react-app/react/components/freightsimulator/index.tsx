@@ -1,54 +1,75 @@
 import React from 'react'
 import { useFreightSimulator } from '../../hooks/useFreightSimulator'
 import { formatPrice, formatEstimate } from '../../utils/utils'
+import styles from './styles.css'
 
 function FreightSimulator() {
-  // hook
+  // Hooks
   const { cep, error, loading, slas, handleCepChange, handleSimulate, isValidCep } =
     useFreightSimulator()
 
   return (
-    <section>
-      <h3>Calcular frete</h3>
+    <section className={styles.container}>
+      <h3 className={styles.title}>
+        Calcular frete
+      </h3>
 
-      <div>
-        <label htmlFor="cep-input">CEP</label>
-        <input
-          id="cep-input"
-          type="text"
-          inputMode="numeric"
-          placeholder="00000-000"
-          value={cep}
-          onChange={handleCepChange}
-          maxLength={9}
-        />
+      <div className={styles.form}>
+        <label className={styles.label} htmlFor="cep-input">CEP:</label>
 
-        {error && <span>{error}</span>}
+        <div className={styles.inputRow}>
+          <input
+            id="cep-input"
+            className={`${styles.input} ${error ? styles.inputError : ''}`}
+            type="text"
+            inputMode="numeric"
+            placeholder="00000-000"
+            value={cep}
+            onChange={handleCepChange}
+            maxLength={9}
+          />
 
-        <button
-          onClick={handleSimulate}
-          disabled={!isValidCep(cep) || loading}
-        >
-          {loading ? 'Calculando...' : 'Calcular'}
-        </button>
+          <button
+            className={styles.button}
+            onClick={handleSimulate}
+            disabled={!isValidCep(cep) || loading}
+          >
+            {loading ? 'Calculando...' : 'Calcular'}
+          </button>
+        </div>
+
+        {error && (
+          <span className={styles.errorMessage}>{error}</span>
+        )}
       </div>
 
-      <div>
-        {loading && <p>Buscando opções de frete...</p>}
+      <div className={styles.results}>
+        {loading && (
+          <div className={styles.loadingWrapper}>
+            <span className={styles.dot} />
+            <span className={styles.dot} />
+            <span className={styles.dot} />
+            <p className={styles.loadingText}>Buscando opções de frete...</p>
+          </div>
+        )}
 
         {!loading && slas !== null && (
           slas.length > 0 ? (
-            <ul>
+            <ul className={styles.slaList}>
               {slas.map((sla) => (
-                <li key={sla.id}>
-                  <span>{sla.friendlyName}</span>
-                  <span>{formatEstimate(sla.shippingEstimate)}</span>
-                  <span>{formatPrice(sla.price)}</span>
+                <li key={sla.id} className={styles.slaItem}>
+                  <span className={styles.slaName}>{sla.name}</span>
+                  <span className={styles.slaEstimate}>{formatEstimate(sla.shippingEstimate)}</span>
+                  <span className={styles.slaPrice}>
+                    {formatPrice(sla.price)}
+                  </span>
                 </li>
               ))}
             </ul>
           ) : (
-            <p>Nenhuma opção de frete disponível para este CEP.</p>
+            <p className={styles.emptyMessage}>
+              Nenhuma opção de frete disponível para este CEP.
+            </p>
           )
         )}
       </div>
