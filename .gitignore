@@ -1,0 +1,5 @@
+node_modules/
+.vtex/
+dist/
+build/
+coverage/
