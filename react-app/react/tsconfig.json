@@ -3,7 +3,9 @@
   "compilerOptions": {
     "noEmitOnError": false,
     "lib": [
-      "dom"
+      "dom",
+      "dom.iterable",
+      "esnext"
     ],
     "module": "esnext",
     "moduleResolution": "node",

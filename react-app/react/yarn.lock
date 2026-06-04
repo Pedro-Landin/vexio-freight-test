@@ -4303,6 +4303,10 @@ parse5@5.1.0:
   resolved "https://registry.yarnpkg.com/parse5/-/parse5-5.1.0.tgz#c59341c9723f414c452975564c7c00a68d58acd2"
   integrity sha512-fxNG2sQjHvlVAYmzBZS9YlDp6PTSSDwa98vkD4QgVDDCAo84z5X1t5XyJQ62ImdLXx5NdIIfihey6xpum9/gRQ==
 
+"partnersigrowdev.freight-app@https://landindev--partnersigrowdev.myvtex.com/_v/private/typings/linked/v1/partnersigrowdev.freight-app@0.0.0+build1780547126/public/@types/partnersigrowdev.freight-app":
+  version "0.0.0"
+  resolved "https://landindev--partnersigrowdev.myvtex.com/_v/private/typings/linked/v1/partnersigrowdev.freight-app@0.0.0+build1780547126/public/@types/partnersigrowdev.freight-app#12756d19e1f9218b7afa45a4c70e7a81fdeaf451"
+
 pascalcase@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/pascalcase/-/pascalcase-0.1.1.tgz#b363e55e8006ca6fe21784d2db22bd15d7917f14"
@@ -5337,9 +5341,17 @@ verror@1.10.0:
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
 
+"vtex.product-context@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-context@0.10.1/public/@types/vtex.product-context":
+  version "0.10.1"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-context@0.10.1/public/@types/vtex.product-context#86ceba68085420edcf54749f07e51a257d2e5d94"
+
 "vtex.render-runtime@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.136.2/public/@types/vtex.render-runtime":
   version "8.136.2"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.136.2/public/@types/vtex.render-runtime#afc85cc43da5ee3fc2f0efa000f31adada482d03"
+
+"vtex.store-graphql@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-graphql@2.177.2/public/@types/vtex.store-graphql":
+  version "2.177.2"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-graphql@2.177.2/public/@types/vtex.store-graphql#3b48e62661348c11bbe3602d42334bfa507c779a"
 
 w3c-hr-time@^1.0.1:
   version "1.0.2"

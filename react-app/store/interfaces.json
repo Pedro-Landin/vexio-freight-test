@@ -1,5 +1,5 @@
 {
-  "app-greeting": {
-    "component": "Greeting"
+  "app-freightSimulator": {
+    "component": "FreightSimulator"
   }
 }
