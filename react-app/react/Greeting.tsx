@@ -1,11 +1,6 @@
 import React from 'react'
-
-type Props = {
-  name: string
-}
-
-function Greeting({ name }: Props) {
-  return <div>Hey, {name}</div>
+function Greeting() {
+  return <div>Hey pedro</div>
 }
 
 export default Greeting

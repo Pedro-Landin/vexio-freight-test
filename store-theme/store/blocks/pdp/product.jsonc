@@ -112,6 +112,7 @@
       "product-gifts",
       "flex-layout.row#buy-button",
       "availability-subscriber",
+      "app-greeting",
       "shipping-simulator",
       "share#default"
     ]
